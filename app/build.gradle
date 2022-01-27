@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "de.orome.touren7"
-        minSdk 25
+        minSdk 30
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -31,6 +31,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures{
+        dataBinding true
+        viewBinding true
     }
 }
 
