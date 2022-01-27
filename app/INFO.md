@@ -10,9 +10,10 @@ Versionen und Beschreibung
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
-Version 0.1
-
-
+Version 0.2
+    Farben angepasst
+    Animation für Splashscreen hinzugefügt
 ---------------------------------------------------------------------------------------
-master:
-    GrundApp ohne Ändeungen außer INFO.md
+master und Version 0.1:
+    GrundApp ohne Ändeungen außer 
+    INFO.md und den dependencies
