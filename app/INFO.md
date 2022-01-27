@@ -9,11 +9,13 @@ Versionen und Beschreibung
 
 ---------------------------------------------------------------------------------------
 Version 0.3
-    Themes angepaßt
+    Strings angepasst
+    dimens.xml eingefügt
 ---------------------------------------------------------------------------------------
 Version 0.2
     Farben angepasst
     Animation für Splashscreen hinzugefügt
+    Themes angepaßt
 ---------------------------------------------------------------------------------------
 master und Version 0.1:
     GrundApp ohne Ändeungen außer 
