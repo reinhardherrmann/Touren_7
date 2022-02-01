@@ -7,7 +7,7 @@ import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
-import de.orome.touren7.MainActivity
+import de.orome.touren7.view.home.MainActivity
 import de.orome.touren7.R
 import de.orome.touren7.databinding.ActivitySplashBinding
 
