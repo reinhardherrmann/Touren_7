@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="tViewModel"
+            type="de.orome.touren7.viewmodel.TourenViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,11 +49,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/divider1">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_tournummer_tourdaten_erfassen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:text="@={tViewModel.inputTourNummer}"
                 android:hint="Tournummer" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -66,11 +69,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_tournummer_tourdaten_erfassen">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_tourdatum_tourdaten_erfassen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="date"
+                android:text="@={tViewModel.inputTourDatum}"
                 android:hint="Tourdatum tt.mm.JJJJ" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,11 +89,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_tourdatum_tourdaten_erfassen">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_tourdauer_tourdaten_erfassen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:text="@={tViewModel.inputTourDauer}"
                 android:hint="Tourdauer hh:mm" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,11 +109,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_tourdauer_tourdaten_erfassen">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_depotzeit_vt_tourdaten_erfassen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:text="@={tViewModel.inputTourDepotzeitVt}"
                 android:hint="Depotzeit vor Tour hh:mm" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -123,11 +129,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_depotzeit_vt_tourdaten_erfassen">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_depotzeit_nt_tourdaten_erfassen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:text="@={tViewModel.inputTourDepotzeitNt}"
                 android:hint="Depotzeit nach Tour hh:mm" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -143,11 +150,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_depotzeit_nt_tourdaten_erfassen">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_fahrer_nummer_tourdaten_erfassen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:text="@={tViewModel.inputTourFahrerNummer}"
                 android:hint="Fahrernummer 4-stellig" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -163,11 +171,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/til_fahrer_nummer_tourdaten_erfassen">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_fahrzeug_nummer_tourdaten_erfassen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="time"
+                android:text="@={tViewModel.inputTourFahrzeugNummer}"
                 android:hint="Fahrzeugnummer 4-stellig" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -179,6 +188,7 @@
             android:layout_marginTop="16dp"
             android:layout_weight="1"
             android:text="Speichern"
+            android:onClick="@{()->tViewModel.saveOrUpdateTour()}"
             app:layout_constraintEnd_toEndOf="@+id/til_fahrer_nummer_tourdaten_erfassen"
             app:layout_constraintTop_toBottomOf="@+id/til_fahrzeug_nummer_tourdaten_erfassen" />
 
@@ -190,6 +200,7 @@
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
             android:text="Abbrechen"
+            android:onClick="@{()->tViewModel.cancelInsertTour()}"
             app:layout_constraintEnd_toStartOf="@+id/btn_save_tourdaten_erfassen"
             app:layout_constraintTop_toTopOf="@+id/btn_save_tourdaten_erfassen" />
 

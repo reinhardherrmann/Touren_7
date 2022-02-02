@@ -28,11 +28,12 @@ Versionen und Beschreibung
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
 Version 0.7
-TourenDatabase erstellt
-TourenRepository.kt erstellt
+    TourenDatabase erstellt
+    TourenRepository.kt erstellt
+    TourenViewModel Teil 1
+    TourenViewModelFactory erstellt
+    MainActivity DataBinding eingestellt und Buttons mit Funktionen "belebt"
 ---------------------------------------------------------------------------------------
 Version 0.6 
     TourDao erstellt
