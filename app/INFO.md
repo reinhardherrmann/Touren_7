@@ -26,7 +26,9 @@ Versionen und Beschreibung
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
-
+Version 0.8
+    Dialog Datumseingabe
+    Dialoge zur Eingabe der Zeiten für COS-Zeit, Depotzeit vor und nach Tour
 ---------------------------------------------------------------------------------------
 Version 0.7
     TourenDatabase erstellt

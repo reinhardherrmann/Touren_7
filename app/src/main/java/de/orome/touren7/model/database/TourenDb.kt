@@ -20,7 +20,7 @@ abstract class TourenDb: RoomDatabase() {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         TourenDb::class.java,
-                        "touren_db"
+                        "touren.db"
                     ).build()
                 }
                 return instance

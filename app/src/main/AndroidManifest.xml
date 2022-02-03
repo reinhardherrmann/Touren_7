@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TourenApp7">
+        android:requestLegacyExternalStorage="true"
         <activity
             android:name=".view.touren.TourenActivity"
             android:exported="false" />
