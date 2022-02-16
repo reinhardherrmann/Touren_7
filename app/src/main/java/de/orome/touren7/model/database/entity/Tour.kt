@@ -10,8 +10,10 @@ data class Tour(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "tour_id")
     var id: Int,
+//    @ColumnInfo(name = "tour_fb_id")
+//    var fb_id: String,
     @ColumnInfo(name = "tour_nummer")
-    var tourNummer: Int,
+    var tourNummer: String,
     @ColumnInfo(name = "tour_datum")
     var tourDatum:String,
     @ColumnInfo(name = "tour_dauer")

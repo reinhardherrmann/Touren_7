@@ -20,5 +20,8 @@ interface TourDao {
     suspend fun deleteAllTouren(): Int
 
     @Query("SELECT * FROM tbl_touren ORDER BY tour_datum DESC")
-    fun getAllTouren(): LiveData<List<Tour>>
+    fun getAllLiveTouren(): LiveData<List<Tour>>
+
+    @Query("SELECT * FROM tbl_touren WHERE tour_fahrer_nummer like :tourNummer")
+    suspend fun getSingleTour(tourNummer: String): Tour
 }

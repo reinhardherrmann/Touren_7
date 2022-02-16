@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import de.orome.touren7.model.database.dao.TourDao
 import de.orome.touren7.model.database.entity.Tour
 
-@Database(entities = [Tour::class], version = 1)
+@Database(entities = [Tour::class], version = 1, exportSchema = false)
 abstract class TourenDb: RoomDatabase() {
     abstract val tourDao:  TourDao
     companion object{

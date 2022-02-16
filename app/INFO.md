@@ -24,7 +24,11 @@ Versionen und Beschreibung
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
-
+Version 0.9
+    Activity mit Fragment für RecyclerView Touren
+    DataBinding bei Activity, Fragment und ListItem eingefügt
+    TourDao, repository und TourenViewModel angepaßt
+    TourenListadapter erstellt
 ---------------------------------------------------------------------------------------
 Version 0.8
     Dialog Datumseingabe
