@@ -29,6 +29,7 @@ Version 0.9
     DataBinding bei Activity, Fragment und ListItem eingefügt
     TourDao, repository und TourenViewModel angepaßt
     TourenListadapter erstellt
+    Navigation zur Listenansicht nach Einage der Daten bzw Abbruch der Eingabe
 ---------------------------------------------------------------------------------------
 Version 0.8
     Dialog Datumseingabe
