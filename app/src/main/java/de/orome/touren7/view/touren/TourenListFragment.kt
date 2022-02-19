@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -14,6 +15,7 @@ import de.orome.touren7.R
 import de.orome.touren7.databinding.FragmentTourenListBinding
 import de.orome.touren7.model.TourenListAdapter
 import de.orome.touren7.model.database.TourenDb
+import de.orome.touren7.model.database.entity.Tour
 import de.orome.touren7.model.repositories.TourenRepository
 import de.orome.touren7.viewmodel.TourenViewModel
 import de.orome.touren7.viewmodel.TourenViewModelFactory
@@ -52,8 +54,13 @@ class TourenListFragment : Fragment() {
 
     private fun displayTourenList(){
         viewModel.liveTourenList.observe(viewLifecycleOwner, Observer {
-            binding.rvFragmentTourenList.adapter = TourenListAdapter(it)
+            binding.rvFragmentTourenList.adapter = TourenListAdapter(it,{selectedTour: Tour ->listItemClicked(selectedTour)})
         })
     }
 
+    private fun listItemClicked(selectedTour: Tour) {
+        val tourNummer = selectedTour.tourNummer
+        val action = TourenListFragmentDirections.actionTourenListFragmentToTourenDetailFragment(tourNummer)
+        findNavController().navigate(action)
+    }
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_main"
     app:startDestination="@id/tourenListFragment">
 
@@ -11,6 +12,9 @@
         <action
             android:id="@+id/action_tourenListFragment_to_newTourFragment"
             app:destination="@id/newTourFragment" />
+        <action
+            android:id="@+id/action_tourenListFragment_to_tourenDetailFragment"
+            app:destination="@id/tourenDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/newTourFragment"
@@ -19,5 +23,20 @@
         <action
             android:id="@+id/action_newTourFragment_to_tourenListFragment"
             app:destination="@id/tourenListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tourenDetailFragment"
+        android:name="de.orome.touren7.view.touren.TourenDetailFragment"
+        android:label="fragment_touren_detail"
+        tools:layout="@layout/fragment_touren_detail" >
+        <action
+            android:id="@+id/action_tourenDetailFragment_to_tourenListFragment"
+            app:destination="@id/tourenListFragment" />
+        <action
+            android:id="@+id/action_tourenDetailFragment_to_newTourFragment"
+            app:destination="@id/newTourFragment" />
+        <argument
+            android:name="tourNumber"
+            app:argType="string" />
     </fragment>
 </navigation>

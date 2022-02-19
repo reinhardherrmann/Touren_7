@@ -22,7 +22,10 @@ Versionen und Beschreibung
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
-
+Version 0.10
+    KlickListener auf Listeneintrag führt zur Detailansicht
+    Dazu Adapter völlig neu gestaltet
+    TourenDetaislsfragment erste Schritte
 ---------------------------------------------------------------------------------------
 Version 0.9
     Activity mit Fragment für RecyclerView Touren

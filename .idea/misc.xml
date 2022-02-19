@@ -15,9 +15,12 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_touren.xml" value="0.4395833333333333" />
-        <entry key="app/src/main/res/layout/activity_touren_main.xml" value="0.39814814814814814" />
+        <entry key="app/src/main/res/layout/activity_touren_main.xml" value="0.2421875" />
+        <entry key="app/src/main/res/layout/fragment_touren_detail.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/fragment_touren_details.xml" value="0.36574074074074076" />
         <entry key="app/src/main/res/layout/fragment_touren_list.xml" value="0.4395833333333333" />
-        <entry key="app/src/main/res/layout/item_touren_list.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/item_touren_list.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/item_touren_list_2.xml" value="0.335" />
         <entry key="app/src/main/res/layout/new_tour_fragment.xml" value="0.2916666666666667" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.3648148148148148" />
       </map>

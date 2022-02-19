@@ -1,6 +1,7 @@
 package de.orome.touren7.helper
 
 import android.os.Environment
+import android.text.Editable
 import java.io.File
 import java.util.*
 
@@ -37,4 +38,6 @@ class Helper {
             dbDirFile.mkdirs()
         }
     }
+
+    fun String.toEditable(): Editable =  Editable.Factory.getInstance().newEditable(this)
 }
