@@ -16,7 +16,7 @@
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_touren.xml" value="0.4395833333333333" />
         <entry key="app/src/main/res/layout/activity_touren_main.xml" value="0.2421875" />
-        <entry key="app/src/main/res/layout/fragment_touren_detail.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/fragment_touren_detail.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_touren_details.xml" value="0.36574074074074076" />
         <entry key="app/src/main/res/layout/fragment_touren_list.xml" value="0.4395833333333333" />
         <entry key="app/src/main/res/layout/item_touren_list.xml" value="0.45" />
