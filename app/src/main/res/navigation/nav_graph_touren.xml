@@ -36,7 +36,7 @@
             android:id="@+id/action_tourenDetailFragment_to_newTourFragment"
             app:destination="@id/newTourFragment" />
         <argument
-            android:name="tourNumber"
-            app:argType="string" />
+            android:name="selTour"
+            app:argType="de.orome.touren7.model.database.entity.Tour" />
     </fragment>
 </navigation>

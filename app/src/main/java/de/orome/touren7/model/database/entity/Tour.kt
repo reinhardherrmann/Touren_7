@@ -18,15 +18,25 @@ data class Tour(
     @ColumnInfo(name = "tour_nummer")
     var tourNummer: String,
     @ColumnInfo(name = "tour_datum")
-    var tourDatum:String,
+    var tourDatum: String,
+    @ColumnInfo(name = "tour_sortdatum")
+    var tourSortDatum: Int,
     @ColumnInfo(name = "tour_dauer")
     var tourDauer: String,
     @ColumnInfo(name = "tour_depotzeit_vt")
     var DepotzeitVt: String,
     @ColumnInfo(name = "tour_depotzeit_nt")
-    var DapotzeitNt: String,
+    var DepotzeitNt: String,
     @ColumnInfo(name = "tour_fahrer_nummer")
     var FahrerNummer: String,
     @ColumnInfo(name = "tour_fahrzeug_nummer")
-    var Fahrzeugnummer: String
+    var Fahrzeugnummer: String,
+    @ColumnInfo(name = "tour_anfangs_km")
+    var tourAnfangsKm: Int,
+    @ColumnInfo( name = "tour_ende_km")
+    var tourEndeKm: Int,
+    @ColumnInfo( name = "tour_gesamt_km")
+    var tourGesamtKm: Int,
+    @ColumnInfo( name = "tour_status")
+    var tourStatus: String
 ):Parcelable

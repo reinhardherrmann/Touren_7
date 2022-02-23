@@ -24,4 +24,5 @@ interface TourDao {
 
     @Query("SELECT * FROM tbl_touren WHERE tour_fahrer_nummer like :tourNummer")
     suspend fun getSingleTour(tourNummer: String): Tour
+
 }

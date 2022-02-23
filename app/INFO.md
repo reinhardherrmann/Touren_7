@@ -20,7 +20,14 @@ Versionen und Beschreibung
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
-
+Version 0.11
+    TourenDetailFragment eingeführt
+    DatenModel geändert
+    Tour: Spalten tour_sortdaten, tour_anfangs_km, tour_ende_km, tour_gesamt_km
+            eingefügt
+    TourenDetailFragment Tour als Datenklasse übergeben und Anzeige der Werte tlw. 
+    eingerichtet
+    
 ---------------------------------------------------------------------------------------
 Version 0.10
     KlickListener auf Listeneintrag führt zur Detailansicht

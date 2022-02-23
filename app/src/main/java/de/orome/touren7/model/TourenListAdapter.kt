@@ -35,7 +35,7 @@ class MyViewHolder(val binding: ItemTourenListBinding): RecyclerView.ViewHolder(
         binding.apply {
             tvItemTourTourNummer.text = tour.tourNummer
             tvItemTourTourDatum.text = tour.tourDatum
-            tvItemTourTourStatus.text = "in Bearbeitung"
+            tvItemTourTourStatus.text = tour.tourStatus
             // TOD: Nach Erweiterung des Models Wert übergeben
             // Dazu muss das Layout eine ID erhalten!!
             listItemLayout.setOnClickListener {

@@ -68,7 +68,7 @@
                         android:layout_marginTop="@dimen/_4sdp"
                         android:textAlignment="center"
                         android:textSize="@dimen/_16sdp"
-                        android:text="02.02.2022"
+                        android:text="@={tViewModel.inputTourDatum}"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -113,7 +113,7 @@
                         android:id="@+id/tv_touren_detail_cos_zeit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="03:25"
+                        android:text="03:45"
                         android:textSize="@dimen/_16sdp"
                         app:layout_constraintEnd_toEndOf="@+id/tv_touren_detail_tour_datum"
                         app:layout_constraintTop_toTopOf="@+id/textView3" />
@@ -139,19 +139,19 @@
                         app:layout_constraintGuide_begin="212dp" />
 
                     <TextView
-                        android:id="@+id/tv_touren_detail_depotzeit_nt"
+                        android:id="@+id/tv_touren_detail_depotzeit_vt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="01:25"
+                        android:text="01:13"
                         android:textSize="@dimen/_14sdp"
                         app:layout_constraintEnd_toEndOf="@+id/tv_touren_detail_cos_zeit"
                         app:layout_constraintTop_toTopOf="@+id/textView5" />
 
                     <TextView
-                        android:id="@+id/tv_touren_detail_depotzeit_nt2"
+                        android:id="@+id/tv_touren_detail_depotzeit_nt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="01:25"
+                        android:text="00:25"
                         android:textSize="@dimen/_14sdp"
                         app:layout_constraintEnd_toEndOf="@+id/tv_touren_detail_cos_zeit"
                         app:layout_constraintTop_toTopOf="@+id/textView6" />
@@ -195,6 +195,7 @@
                             android:textSize="@dimen/_16ssp" />
 
                         <TextView
+
                             android:id="@+id/tv_touren_detail_Ende_kilometer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -280,7 +281,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/_4sdp"
                             android:layout_weight="1"
-                            android:text="Tour starten"
+                            android:text="@string/lbl_btn_tour_starten"
                             android:textColor="@color/teal_700" />
 
                         <Button
@@ -290,7 +291,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/_4sdp"
                             android:layout_weight="1"
-                            android:text="Tour beenden" />
+                            android:text="@string/lbl_btn_tour_beenden" />
 
                     </LinearLayout>
 

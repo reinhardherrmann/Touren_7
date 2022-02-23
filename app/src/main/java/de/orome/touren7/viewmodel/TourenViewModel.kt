@@ -6,38 +6,45 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import de.orome.touren7.model.database.dao.TourDao
 import de.orome.touren7.model.database.entity.Tour
 import de.orome.touren7.model.repositories.TourenRepository
 import de.orome.touren7.helper.Event
+import de.orome.touren7.helper.Helper
 import kotlinx.coroutines.launch
 
 class TourenViewModel(private val tourenRepository: TourenRepository): ViewModel(), Observable {
 
     val liveTourenList = tourenRepository.allLiveTouren
+
     private val isUpdateOrDelete = false
     private lateinit var tourToUpdateOrDelete: Tour
+    val helper = Helper()
 
     @Bindable
     val inputTourNummer = MutableLiveData<String?>()
-
     @Bindable
     val inputTourDatum = MutableLiveData<String?>()
-
     @Bindable
     val inputTourDauer = MutableLiveData<String?>()
-
     @Bindable
     val inputTourDepotzeitVt = MutableLiveData<String?>()
-
     @Bindable
     val inputTourDepotzeitNt = MutableLiveData<String?>()
-
     @Bindable
     val inputTourFahrerNummer = MutableLiveData<String?>()
-
     @Bindable
     val inputTourFahrzeugNummer = MutableLiveData<String?>()
+    @Bindable
+    val inputTourStatus = MutableLiveData<String?>()
+    @Bindable
+    val inputTourStartKm = MutableLiveData<Int>()
+    @Bindable
+    val inputTourEndKm = MutableLiveData<Int>()
+    @Bindable
+    val inputTourGesamtKm = MutableLiveData<Int>()
+
+
+
 
     // Meldungen um mit der View zu kommunizieren
     private val statusMessage = MutableLiveData<Event<String>>()
@@ -61,10 +68,16 @@ class TourenViewModel(private val tourenRepository: TourenRepository): ViewModel
             // alle erforderlichen Daten wurden eingegeben
             val tourNummer = inputTourNummer.value!!
             val tourDatum = inputTourDatum.value!!
+            val tourSortDatum = helper.convertDateStringToInt(tourDatum)
             val tourDauer = inputTourDauer.value!!
             var tourDepotzeitVt = ""
             var tourDepotzeitNt = ""
             var tourFahrerNummer = inputTourFahrerNummer.value!!
+            var tourAnfangsKm = 0
+            var tourEndeKm = 0
+            var tourGesamtKm = 0
+            var tourStatus = "offen"
+
             if (inputTourFahrerNummer.value == null) {
                 tourFahrerNummer = "0056"
             }
@@ -85,8 +98,8 @@ class TourenViewModel(private val tourenRepository: TourenRepository): ViewModel
             }
             insertTour(
                 Tour(
-                    0, tourNummer, tourDatum, tourDauer, tourDepotzeitVt,
-                    tourDepotzeitNt, tourFahrerNummer, tourFahrzeugNummer
+                    0, tourNummer, tourDatum, tourSortDatum, tourDauer, tourDepotzeitVt,
+                    tourDepotzeitNt, tourFahrerNummer, tourFahrzeugNummer,tourAnfangsKm,tourEndeKm,tourGesamtKm, tourStatus
                 )
             )
             clearFormValues()
@@ -130,6 +143,18 @@ class TourenViewModel(private val tourenRepository: TourenRepository): ViewModel
         } else{
             statusMessage.value = Event("Fehler beim Aktualisieren der Tour!")
         }
+    }
+
+    fun getSingleTourByNumber(tourNummer: String){
+
+    }
+
+    fun starteTour(){
+        statusMessage.value = Event("Tour gestartet")
+    }
+
+    fun beendeTour(){
+        statusMessage.value = Event("Tour beendet")
     }
 
 

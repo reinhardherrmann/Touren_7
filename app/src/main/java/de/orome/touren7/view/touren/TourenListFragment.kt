@@ -38,7 +38,7 @@ class TourenListFragment : Fragment() {
         val factory = TourenViewModelFactory(repository)
         viewModel = ViewModelProvider(this,factory).get(TourenViewModel::class.java)
         binding.tViewModel = viewModel
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = this.requireActivity()
         binding.rvFragmentTourenList.adapter
         initRecyclerView()
         binding.fabAddNewTour.setOnClickListener {
@@ -59,8 +59,8 @@ class TourenListFragment : Fragment() {
     }
 
     private fun listItemClicked(selectedTour: Tour) {
-        val tourNummer = selectedTour.tourNummer
-        val action = TourenListFragmentDirections.actionTourenListFragmentToTourenDetailFragment(tourNummer)
+        val selTour = selectedTour
+        val action = TourenListFragmentDirections.actionTourenListFragmentToTourenDetailFragment(selTour)
         findNavController().navigate(action)
     }
 }

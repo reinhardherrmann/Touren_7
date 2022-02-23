@@ -3,6 +3,9 @@ package de.orome.touren7.helper
 import android.os.Environment
 import android.text.Editable
 import java.io.File
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 class Helper {
@@ -40,4 +43,15 @@ class Helper {
     }
 
     fun String.toEditable(): Editable =  Editable.Factory.getInstance().newEditable(this)
+
+    fun convertDateStringToInt(dateString: String): Int {
+        var dateInt =0
+        val dummy = dateString.split(".")
+        if (dummy.size == 3){
+            val datString = ""+ dummy[2]+dummy[1]+dummy[0]
+            dateInt = datString.toInt()
+        }
+
+        return dateInt
+    }
 }

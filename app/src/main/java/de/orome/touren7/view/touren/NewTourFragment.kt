@@ -44,7 +44,7 @@ class NewTourFragment : Fragment() {
         val factory = TourenViewModelFactory(repository)
         viewModel = ViewModelProvider(this,factory).get(TourenViewModel::class.java)
         binding.tViewModel = viewModel
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = this.requireActivity()
 
         // Observer für Statusmeldungen
         viewModel._statusMessage.observe(requireActivity(), Observer {

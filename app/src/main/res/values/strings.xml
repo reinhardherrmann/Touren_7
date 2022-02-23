@@ -21,4 +21,6 @@
     <string name="hint_depotzeit_nach_tour">Depotzeit nach Tour</string>
     <string name="lbl_AddUpdateTour_Activity">Tourdaten editieren</string>
     <string name="title_activity_touren">MainActivity</string>
+    <string name="lbl_btn_tour_starten">Tour starten</string>
+    <string name="lbl_btn_tour_beenden">Tour beenden</string>
 </resources>

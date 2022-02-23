@@ -5,7 +5,7 @@ import de.orome.touren7.model.database.entity.Tour
 
 class TourenRepository(private val tourDao: TourDao) {
     val allLiveTouren = tourDao.getAllLiveTouren()
-    //val singleLiveTour = tourDao.getSingleLiveTour()
+
 
     suspend fun insertTour(tour: Tour): Long{
         // returns new RowID
